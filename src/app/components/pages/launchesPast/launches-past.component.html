@@ -1,0 +1,19 @@
+<!--Data in "father" component
+<section class="container">
+    <ul class="launches__list">
+        <li *ngFor ="let launches of launchesPast$ | async">
+            Id: {{ launches.id }} - Mission Name: {{ launches.mission_name }} <br>
+            Date: {{ launches.launch_date_local }} <br>
+            Launch Site Name: {{ launches.launch_site.site_name_long }} <br>
+            Launch Site Code: {{ launches.launch_site.site_name }} <br>                        
+        </li>        
+    </ul>           
+</section>
+-->
+
+<!--Data in "child" component -->
+<h1>Details Cards</h1>
+<section class="launchesCard__list">                             
+    <app-launches-past-details *ngFor ="let launches of launchesPast$ | async" [launchesDetails]="launches">     
+    </app-launches-past-details>                    
+</section>

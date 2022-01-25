@@ -1,0 +1,10 @@
+<section class="container_list">
+    <ul class="launches__list">
+        <li *ngFor ="let launches of launchesPast$ | async">                     
+            <a href="{{ launches.links.article_link }}" target="_blank">See Article</a><br>
+            <a href="{{ launches.links.video_link }}" target="_blank">Link Video</a><br>               
+            Img Mission Patch<br>         
+            <img [src]="launches.links.mission_patch" alt="img" width="100" height="100"/>
+        </li>
+    </ul>       
+</section>
